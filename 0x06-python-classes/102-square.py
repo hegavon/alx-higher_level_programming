@@ -1,28 +1,39 @@
 #!/usr/bin/python3
-"""Square class defination"""
+"""Square class definition"""
 
 
 class Square:
-    """square body"""
+    """Square class"""
 
     def __init__(self, size=0):
-        """square contructor 
-        Args: size: length of a side of Square
+        """Square constructor
+
+        Args:
+            size (int): length of a side of the Square
         """
         self.__size = size
 
     @property
     def size(self):
-        """"The propery of size as the length 
-        of a side of Square
+        """Property for the size of the Square
+
         Raises:
-            TypeError: if size != int
-            ValueErrorr: if size < 0
+            TypeError: If size is not an integer
+            ValueError: If size is less than 0
         """
         return self.__size
 
     @size.setter
     def size(self, value):
+        """Setter for the size of the Square
+
+        Args:
+            value (int): The new size value
+
+        Raises:
+            TypeError: If size is not an integer
+            ValueError: If size is less than 0
+        """
         if not isinstance(value, int):
             raise TypeError('size must be an integer')
         if value < 0:
@@ -30,7 +41,11 @@ class Square:
         self.__size = value
 
     def area(self):
-        """Get the area instance to comparators"""
+        """Calculate the area of the Square
+
+        Returns:
+            int: The area of the Square
+        """
         return self.__size * self.__size
 
     def __le__(self, other):
@@ -50,3 +65,4 @@ class Square:
 
     def __eq__(self, other):
         return self.area() == other.area()
+
