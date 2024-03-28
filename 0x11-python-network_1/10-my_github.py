@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This script retrieves the user ID from the GitHub API using the provided username and password.
+This retrieves the user ID from the GitHub API
+using the provided username and password.
 Usage: ./10-my_github.py [github_username] [github_password]
 """
 from sys import argv
